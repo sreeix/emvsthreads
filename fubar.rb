@@ -6,6 +6,6 @@ sites = ['http://gdata.youtube.com/feeds/api/videos/agCqQFHFf2g', 'http://www.ya
 
 Benchmark.bmbm do |b|
   b.report("Threads") {ThreadFu.new.do(sites)}
-  # b.report("Simple EM") {EmFu.new.do(sites)}
+  b.report("Simple EM") {EmFu.new.do(sites)}
 end
 
