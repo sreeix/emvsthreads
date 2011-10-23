@@ -1,0 +1,42 @@
+rvm use ruby-1.9.2-p290@tmp
+
+~/tmp/emvsthreads% bundle exec ruby fubar.rb
+Rehearsal ---------------------------------------------
+Threads     0.050000   0.030000   0.080000 ( 11.842958)
+Simple EM   0.060000   0.090000   0.150000 ( 31.602849)
+------------------------------------ total: 0.230000sec
+
+                user     system      total        real
+Threads     0.050000   0.030000   0.080000 ( 11.540872)
+Simple EM   0.030000   0.050000   0.080000 ( 19.227577)
+
+rvm use ruby-1.9.2-p180@tmp
+~/tmp/emvsthreads% bundle exec ruby fubar.rb
+Rehearsal ---------------------------------------------
+Threads     0.060000   0.040000   0.100000 ( 16.466221)
+Simple EM   0.050000   0.070000   0.120000 ( 23.686902)
+------------------------------------ total: 0.220000sec
+
+                user     system      total        real
+Threads     0.050000   0.040000   0.090000 ( 14.146033)
+Simple EM   0.050000   0.080000   0.130000 ( 30.788366)
+
+rvm use ruby-1.8.7-p334@tmp
+~/tmp/emvsthreads% bundle exec ruby fubar.rb
+Rehearsal ---------------------------------------------
+Threads     0.070000   0.010000   0.080000 ( 22.963398)
+Simple EM   0.030000   0.030000   0.060000 ( 36.104782)
+------------------------------------ total: 0.140000sec
+
+                user     system      total        real
+Threads     0.050000   0.010000   0.060000 ( 17.305939)
+Simple EM   0.020000   0.010000   0.030000 ( 21.647464)
+
+rvm use jruby-1.6.3@tmp
+~/tmp/emvsthreads% bundle exec ruby fubar.rb
+Rehearsal -------------------------------------------
+Threads   6.041000   0.000000   6.041000 (  6.041000)
+---------------------------------- total: 6.041000sec
+
+              user     system      total        real
+Threads   7.441000   0.000000   7.441000 (  7.441000)
